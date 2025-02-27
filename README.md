@@ -1,9 +1,9 @@
-# Java Web Application Deployment with Vagrant, Nagios, and Docker
+# Java Web Application Deployment with Vagrant, Nagios, Docker, and Kubernetes
 ## Introduction
-This project demonstrates how to deploy a Java-based web application across multiple virtual machines (VMs) using Vagrant. It includes manual setup, automation using Bash scripts, health monitoring with Nagios, and containerization using Docker. The goal is to showcase DevOps skills by creating a scalable, monitored, and containerized deployment.
+This project demonstrates how to deploy a Java-based web application across multiple virtual machines (VMs) using Vagrant. It includes manual setup, automation using Bash scripts, health monitoring with Nagios, containerization using Docker, and orchestration using Kubernetes. The goal is to showcase DevOps skills by creating a scalable, monitored, containerized, and orchestrated deployment.
 
 ## Purpose
-To practice and demonstrate DevOps concepts, including deployment automation, system health monitoring, and containerization, in a simulated multi-VM environment.
+To practice and demonstrate DevOps concepts, including deployment automation, system health monitoring, containerization, and orchestration, in a simulated multi-VM environment.
 
 ## Tools
 - Vagrant
@@ -18,6 +18,7 @@ To practice and demonstrate DevOps concepts, including deployment automation, sy
 - Nagios
 - Docker
 - Docker Compose
+- Kubernetes
 
 ## Steps
 ### 1. Manual Deployment
@@ -51,6 +52,14 @@ To practice and demonstrate DevOps concepts, including deployment automation, sy
   - **Memcached**: For caching.
   - **RabbitMQ**: For message queuing.
 
+### 5. Orchestration with Kubernetes
+- Deployed the containerized application using Kubernetes.
+- Created Kubernetes YAML configuration files to define:
+  - Secrets for the application.
+  - Services for the application, MariaDB, Memcached, and RabbitMQ, exposing them via Cluster IPs.
+  - Deployments for the Java application, MariaDB, Memcached, and RabbitMQ.
+  - ConfigMaps for the database, Memcached, and RabbitMQ configurations.
+
 ## What I Learned
 This project provided valuable learning experiences across several areas of DevOps:
 1. **Efficient VM Creation**: 
@@ -63,5 +72,10 @@ This project provided valuable learning experiences across several areas of DevO
 4. **Containerization**:
    - Learned how to containerize a Java web application using Docker.
    - Gained experience with Docker Compose to manage multi-container applications efficiently.
+5. **Orchestration with Kubernetes**:
+   - Understood the basics of Kubernetes and its components (Pods, Services, Deployments, ConfigMaps, Secrets).
+   - Learned how to create and apply Kubernetes YAML configuration files to deploy and manage containerized applications.
+   - Gained experience in managing configurations and secrets securely within Kubernetes.
+   - Understood how to expose services within the cluster using Cluster IPs.
 
-These learnings enhanced my understanding of automation, system compatibility, monitoring, and containerization in a multi-VM environment.
+These learnings enhanced my understanding of automation, system compatibility, monitoring, containerization, and orchestration in a multi-VM environment.
